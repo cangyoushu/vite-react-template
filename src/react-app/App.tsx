@@ -31,7 +31,8 @@ function App() {
           />
         </a>
       </div>
-      <h1>Vite + React + Hono + Cloudflare</h1>
+      <h1>枝江糖果工厂制药有限公司</h1>
+      <h2>敬请期待</h2>
       <div className="card">
         <button
           onClick={() => setCount((count) => count + 1)}
