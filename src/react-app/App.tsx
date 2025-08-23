@@ -3,6 +3,16 @@
 import { useState, useEffect } from 'react';
 import "./App.css";
 
+// 导入所有图片
+import onePNG from './assets/one.PNG';
+import twoPNG from './assets/two.PNG';
+import image1 from './assets/1.png';
+import image2 from './assets/2.png';
+import image3 from './assets/3.png';
+import image4 from './assets/4.png';
+import image5 from './assets/5.png';
+import image6 from './assets/6.png';
+
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentBanner, setCurrentBanner] = useState(0);
@@ -14,12 +24,12 @@ function App() {
   ];
 
   const carouselImages = [
-    { id: 1, alt: "公司环境1", src: "/src/react-app/assets/1.png" },
-    { id: 2, alt: "公司环境2", src: "/src/react-app/assets/2.png" },
-    { id: 3, alt: "公司环境3", src: "/src/react-app/assets/3.png" },
-    { id: 4, alt: "公司环境4", src: "/src/react-app/assets/4.png" },
-    { id: 5, alt: "公司环境5", src: "/src/react-app/assets/5.png" },
-    { id: 6, alt: "公司环境6", src: "/src/react-app/assets/6.png" }
+    { id: 1, alt: "1", src: image1 },
+    { id: 2, alt: "2", src: image2 },
+    { id: 3, alt: "3", src: image3 },
+    { id: 4, alt: "4", src: image4 },
+    { id: 5, alt: "5", src: image5 },
+    { id: 6, alt: "6", src: image6 }
   ];
 
 // 轮播图自动切换
@@ -62,8 +72,8 @@ function App() {
         <div className="container">
           <div className="promotion-banner">
             <img 
-              src={currentBanner === 0 ? '/src/react-app/assets/one.PNG' : '/src/react-app/assets/two.PNG'} 
-              alt="公司宣传图" 
+              src={currentBanner === 0 ? onePNG : twoPNG} 
+              alt="宣传图" 
               className="banner-image"
             />
             <div className="banner-overlay">
@@ -78,7 +88,7 @@ function App() {
       {/* 轮播图 */}
       <div className="carousel-section">
         <div className="container">
-          <h2>公司环境展示</h2>
+          <h2>药片图展示</h2>
           <div className="carousel">
             <button className="carousel-arrow left" onClick={() => setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length)}>
               ←
